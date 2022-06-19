@@ -1,0 +1,1 @@
+const refApi = 'http://www.dnd5eapi.co/swagger/openapi.json';
