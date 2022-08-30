@@ -1,5 +1,5 @@
 import React from 'react';
-import Api from './components/API';
+import Home from './pages/Home';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <Api/>
+      <Home/>
     </div>
   );
 }

@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 export default function Api () {
-  const refApi = 'http://www.dnd5eapi.co/swagger/openapi.json';
-  const [api, setApi] = useState([]);
+  const [data, setData] = useState([]);
 
-  const fetchApi = async () => {
-     const res = await fetch(refApi);
-     const data = await res.json();
-     setApi(data);
-  }
   useEffect(() => {
+    const fetchApi = async () => {
+      await fetch('https:www.dnd5eapi.co/api/classes/')
+        .then((res) => res.json())
+        .then((data) => setData(data));
+    };
     fetchApi();
   }, []);
 
   return(
     <div>
-      <p>{api.value}</p>
-        <button onClick={fetchApi}>Generate</button>
+      {console.log(data.results[3])}
+      {/* <p>{data}</p> */}
+        {/* <button onClick={useEffect}>Generate</button> */}
     </div>
   );
 }
